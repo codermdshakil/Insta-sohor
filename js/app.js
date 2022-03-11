@@ -32,6 +32,7 @@ const displayContent = (text) => {
     return text.length < 30 ? text : text.slice(0, 30) + "<span class='fw-bold'>... read more</span>";
 };
 
+// toggle area control here 
 const switchTab = (id) => {
     if (id === "posts") {
         document.getElementById( "posts" ).style.display = "grid";
@@ -55,6 +56,7 @@ const switchTab = (id) => {
     }
 };
 
+// createPost using function 
 const createPost = (post) => {
     const image = post.image;
     const div = document.createElement( "article" );
@@ -137,6 +139,7 @@ const createPost = (post) => {
     return div;
 };
 
+// showPosts 
 const showPosts = (posts) => {
     const productsContainer = document.getElementById( "posts" );
     productsContainer.innerHTML = "";
@@ -147,6 +150,7 @@ const showPosts = (posts) => {
     });
 };
 
+// displayLikedPosts using function
 const displayLikedPosts = () => {
     const likedPosts = getLikedPosts();
     likedPosts.forEach((post) => {
@@ -155,6 +159,7 @@ const displayLikedPosts = () => {
     });
 };
 
+// displayReportedPosts using function 
 const displayReportedPosts = () => {
     const reportedPosts = getReportedPosts();
     posts.forEach((post) => {
@@ -163,9 +168,12 @@ const displayReportedPosts = () => {
     });
 };
 
+// loadPosts from here 
 const loadPosts = async () =>{
   let data = await fetch('../data/posts.json');
   posts = await data.json();
   showPosts(posts);
 }
+
 loadPosts();
+
