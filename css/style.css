@@ -258,8 +258,9 @@ question-section starts here
   border-radius: 20px;
   box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
 }
-
-
+.answer-style{
+  border-bottom: 1px solid black;
+}
 
 
 
