@@ -245,6 +245,24 @@ img {
   display: none;
 }
 
+
+
+/*----------------------------
+question-section starts here 
+----------------------------- */
+.question-section{
+  margin-top: 20px;
+  padding: 20px;
+  margin-bottom: 30px;
+  background-color:#cad5e265;
+  border-radius: 20px;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+
+
+
+
+
 @media only screen and (max-width: 992px) {
   #posts {
     grid-template-columns: repeat(2, 1fr);
